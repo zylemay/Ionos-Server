@@ -19,5 +19,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /htdocs/ # Adjust this if needed
-          protocol: ftps-legacy
-          port: 990
+          protocol: ftps
+          port: 22
