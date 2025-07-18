@@ -20,4 +20,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /htdocs/ # Adjust this if needed
           protocol: ftps-legacy
-          port: 22
+          port: 990
