@@ -1,42 +1,42 @@
 name: Deploy to IONOS via FTP
 
 on:
-  push:
-    branches:
-      - main # or your default branch
+    push:
+        branches:
+            - main # or your default branch
 
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false # don’t auto-run install here
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
+              with:
+                  run_install: false # don’t auto-run install here
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "pnpm" # caches pnpm dependencies
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: "pnpm" # caches pnpm dependencies
 
-      - name: Install dependencies
-        run: pnpm install
+            - name: Install dependencies
+              run: pnpm install
 
-      - name: Build project
-        run: pnpm build
+            - name: Build project
+              run: pnpm build
 
-      - name: Deploy to IONOS
-        uses: wangyucode/sftp-upload-action@v2.0.4
-        with:
-          host: ${{ secrets.FTP_HOST }}
-          port: 22
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          compress: true
-          forceUpload: true
-          localDir: "dist"
-          remoteDir: "/"
+            - name: Deploy to IONOS
+              uses: wangyucode/sftp-upload-action@v2.0.4
+              with:
+                  host: ${{ secrets.FTP_HOST }}
+                  port: 22
+                  username: ${{ secrets.FTP_USERNAME }}
+                  password: ${{ secrets.FTP_PASSWORD }}
+                  compress: true
+                  forceUpload: true
+                  localDir: "dist"
+                  remoteDir: "/"
