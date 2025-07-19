@@ -12,16 +12,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false # don’t auto-run install here
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm" # caches pnpm dependencies
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false # don’t auto-run install here
 
       - name: Install dependencies
         run: pnpm install
