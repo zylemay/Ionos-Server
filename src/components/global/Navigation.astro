@@ -15,10 +15,14 @@ let pages = [
 		title: "Home",
 		url: "/",
 	},
-	// {
-	// 	title: "Services",
-	// 	url: "/services",
-	// },
+	{
+		title: "Event Features",
+		url: "#services",
+	},
+	{
+		title: "Startups",
+		url: "/work/",
+	},
 	{
 		title: "Blog",
 		url: "/blog/",
@@ -288,8 +292,8 @@ const { pathname } = Astro.url;
 
 <script>
 	import { gsap } from "gsap";
-	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 	gsap.registerPlugin(DrawSVGPlugin, ScrollTrigger);
 

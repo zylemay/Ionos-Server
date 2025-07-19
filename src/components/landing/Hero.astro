@@ -12,31 +12,29 @@ const translatePath = useTranslatedPath(lang);
 		<div class="relative flex flex-1 flex-col justify-around rounded-lg pb-10 pt-20 lg:rounded-2xl">
 			<div class="flex justify-center">
 				<h1 class="text-center font-display text-5xl font-extrabold uppercase sm:text-7xl md:text-8xl lg:text-9xl">
-					<span>{t("hero.title.main")}</span>
+					<span>Startup Bridge</span>
 					<span class="rotator relative inline-flex h-20 w-full justify-center md:h-24 lg:h-32">
-						<span>{t("hero.title.1")}</span><span>{t("hero.title.2")}</span><span>{t("hero.title.3")}</span><span>
-							{t("hero.title.4")}
-						</span><span>{t("hero.title.1")}</span>
+						<span>Connect</span><span>Pitch</span><span>Grow</span><span>Fund</span><span>Connect</span>
 					</span>
 				</h1>
 			</div>
 			<div class="flex flex-col items-center gap-5 text-center lg:gap-10">
 				<p class="mt-8 max-w-3xl font-mono lg:text-lg">
-					{t("hero.subtitle")}
+					The premier event for Series A startups to meet leading venture capitalists. Join us for a day of pitches, networking, and growth
+					opportunities. Register now to secure your spot at Startup Bridge 2025!
 				</p>
 				<div class="flex flex-col items-center justify-center gap-3 lg:col-start-1">
 					<div class="squircle-bg rounded-lg bg-zinc-900" data-cursor-hover data-cursor-parallax>
 						<a
 							class="flex h-10 w-full max-w-52 flex-1 items-center justify-center px-4 py-2 text-xl text-slate-200 transition-all hover:text-white sm:w-auto md:font-bold lg:h-10"
-							aria-label="Contact Page"
+							aria-label="Register Page"
 							href={translatePath("/contact/")}>
-							{t("contact")}
+							Register Now
 						</a>
 					</div>
-
 					<small>
-						{t("or")}
-						<LinkBlend id="go-projects-button" isButton={true}>{t("hero.scroll")}</LinkBlend>
+						or
+						<LinkBlend id="go-projects-button" isButton={true}>Learn more about the event</LinkBlend>
 					</small>
 				</div>
 			</div>
@@ -90,9 +88,9 @@ const translatePath = useTranslatedPath(lang);
 
 <script>
 	import { gsap } from "gsap";
+	import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	import { SplitText } from "gsap/SplitText";
-	import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 	gsap.registerPlugin(ScrollTrigger, SplitText, ScrollToPlugin);
 

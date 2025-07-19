@@ -15,28 +15,28 @@ const { class: className } = Astro.props;
 
 const points = [
 	{
-		title: t("websites.title"),
-		content: t("websites.content"),
+		title: "Pitch Sessions",
+		content: "Showcase your startup to a panel of top venture capitalists and industry leaders. Receive feedback and funding opportunities.",
 		image: websiteSvg,
 	},
 	{
-		title: t("apps.title"),
-		content: t("apps.content"),
+		title: "Networking Lounge",
+		content: "Connect with founders, investors, and mentors in curated networking sessions designed to spark collaboration.",
 		image: mobileSvg,
 	},
 	{
-		title: t("uiux.title"),
-		content: t("uiux.content"),
+		title: "Workshops",
+		content: "Participate in hands-on workshops covering fundraising, scaling, product-market fit, and more, led by experts.",
 		image: designSvg,
 	},
 	{
-		title: t("seo.title"),
-		content: t("seo.content"),
+		title: "1:1 VC Meetings",
+		content: "Book private meetings with leading VCs actively seeking Series A opportunities.",
 		image: seoSvg,
 	},
 	{
-		title: t("advertising.title"),
-		content: t("advertising.content"),
+		title: "Startup Showcase",
+		content: "Exhibit your product or service to an audience of investors, press, and fellow entrepreneurs.",
 		image: advertisingSvg,
 	},
 ];
@@ -66,8 +66,8 @@ const points = [
 
 <script>
 	import { gsap } from "gsap";
-	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 	gsap.registerPlugin(ScrollTrigger, MorphSVGPlugin);
 

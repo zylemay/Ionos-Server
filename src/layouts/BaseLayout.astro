@@ -20,42 +20,42 @@ const lang = getLangFromUrl(Astro.url);
 const shareImage = new URL("/images/meta/mintaka_share.gif", Astro.site).toString();
 
 const defaultSeo: AstroSeoProps = {
-	title: "Web Agency Leading in Performant Web Design Solutions - Mintaka Studio",
+	title: "Startup Bridge – Connecting Series A Startups & Venture Capitalists",
 	description:
-		"Mintaka Studio excels in creating fast, user-friendly websites with a focus on aesthetic design and SEO optimization, ensuring a standout online presence",
-	canonical: "https://mintaka.co",
+		"Startup Bridge is the premier event for Series A startups to connect with leading venture capitalists. Pitch, network, and accelerate your growth at Startup Bridge 2025.",
+	canonical: "https://startupbridgeph.com",
 	openGraph: {
-		url: "https://mintaka.co",
-		title: "Web Agency Leading in Performant Web Design Solutions - Mintaka Studio",
+		url: "https://startupbridgeph.com",
+		title: "Startup Bridge – Connecting Series A Startups & Venture Capitalists",
 		description:
-			"Mintaka Studio excels in creating fast, user-friendly websites with a focus on aesthetic design and SEO optimization, ensuring a standout online presence",
+			"Startup Bridge is the premier event for Series A startups to connect with leading venture capitalists. Pitch, network, and accelerate your growth at Startup Bridge 2025.",
 		images: [
 			{
 				url: shareImage,
 				width: 1200,
 				height: 630,
-				alt: "Social open graph",
+				alt: "Startup Bridge event social preview",
 				type: "image/gif",
 			},
 			{
 				url: shareImage,
 				width: 4096,
 				height: 4096,
-				alt: "Twitter open graph",
+				alt: "Startup Bridge event Twitter preview",
 				type: "image/gif",
 			},
 		],
-		site_name: "Mintaka",
+		site_name: "Startup Bridge",
 	},
 	twitter: {
-		handle: "@mintakastudio",
-		site: "@mintakastudio",
+		handle: "@startupbridge",
+		site: "@startupbridge",
 		cardType: "summary_large_image",
 	},
 	additionalMetaTags: [
 		{
 			name: "publisher",
-			content: "Mintaka Studio",
+			content: "Startup Bridge",
 		},
 	],
 };
