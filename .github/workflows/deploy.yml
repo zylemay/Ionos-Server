@@ -12,10 +12,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm" # caches pnpm dependencies
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false # don’t auto-run install here
+
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Build project
-        run: |
-          pnpm install
-          pnpm build
+        run: pnpm build
 
       - name: Deploy to IONOS
         uses: wangyucode/sftp-upload-action@v2.0.4
