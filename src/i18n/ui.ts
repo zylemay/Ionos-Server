@@ -12,7 +12,7 @@ export const ui = {
 		contacts: "Contacts",
 		contactus: "Contact us",
 		projects: "Startups",
-		services: "Event Features",
+		services: "Event",
 		homepage: "Homepage",
 		tagline:
 			"Startup Bridge connects Series A startups with top venture capitalists. Pitch, network, and accelerate your growth at the event designed to build the future.",
