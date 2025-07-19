@@ -23,4 +23,3 @@ jobs:
           forceUpload: true
           localDir: "dist"
           remoteDir: "/"
-          removeExtraFilesOnServer: true
